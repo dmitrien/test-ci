@@ -7,3 +7,15 @@ export function healthPerson({health}) {
   }
   return 'healthy'
 }
+
+export function sortPerson(listObj) {
+  return listObj.sort((a, b) => {
+    if (a.health < b.health) {
+       return 1;
+     }
+     if (a.health > b.health) {
+       return -1;
+     }
+     return 0;
+    });
+}
