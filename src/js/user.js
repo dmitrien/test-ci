@@ -1,11 +1,9 @@
-export function healthPerson(obj) {
-  let result = obj.health
-  let status = 'healthy'
-  if (result <= 15) {
-    status = 'critical'
+export function healthPerson({health}) {
+  if (health <= 15) {
+    return 'critical'
   }
-  if (16 <= result && result < 51) {
-    status = 'wounded'
+  if (health <= 50) {
+    return 'wounded'
   }
-  return status
+  return 'healthy'
 }
